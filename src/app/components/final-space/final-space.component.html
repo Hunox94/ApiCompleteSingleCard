@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row border-1 shadow">
+    <h2>Final Space API</h2>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-md-4 my-2" *ngFor="let char of infoAPI">
+      <div class="card" [routerLink]="'/personajeFinalSpace/'+char.id">
+        <div class="card-header bg-success">
+          <h4>{{char.name}}</h4>
+        </div>
+        <img [src]="char.img_url" alt="" class="card-image">
+        <div class="card-body bg-black bg-gradient">
+          <p><strong>Estado:</strong> {{char.status}}</p>
+          <p><strong>Genero:</strong> {{char.gender}}</p>
+          <p><strong>Color de pelo:</strong> {{char.hair}}</p>
+          <p><strong>Origen:</strong> {{char.origin}}</p>
+
+
+        </div>
+        <div class="card-footer bg-success">
+          <small>ID Personaje: {{char.id}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

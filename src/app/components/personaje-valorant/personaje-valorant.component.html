@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row mt-4 mb-4">
+    <div class="col-6 offset-3">
+      <div class="card shadow">
+        <div class="card-header text-center">
+          <div class="card-title text-center">
+            <h2>{{personajeValorant.displayName}}</h2>
+          </div>
+        </div>
+        <img [src]="personajeValorant.displayIcon" alt="" class="card-img-top">
+        <div class="card-body bg-danger text-center">
+          <p><strong>Role: </strong> {{personajeValorant.role?.displayName}}</p>
+          <p><strong>Descripción:</strong> {{personajeValorant.description}}</p>
+          <p><strong>Habilidades:</strong> {{personajeValorant.abilities[0].description}}</p>
+        </div>
+        <div class="card-footer">
+          <p><strong>UUID: {{personajeValorant.uuid}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

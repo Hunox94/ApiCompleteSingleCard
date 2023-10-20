@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row border-1 shadow">
+    <h1>Rick y Morty API</h1>
+    <h2>Número de personajes: {{infoAPI.info.count}}</h2>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-md-4 my-2" *ngFor="let char of infoAPI.results">
+      <div class="card h-100" [routerLink]="'/personaje/'+char.id">
+        <div class="card-header bg-success text-center">
+          <h4>{{char.id}} . {{char.name}}</h4>
+        </div>
+        <img [src]="char.image?char.image:'assets/images/logo.jpg'" alt="" class="card-image">
+        <div class="card-body bg-gradient bg-black">
+          <p><strong>Gender: </strong> {{char.gender}}</p>
+          <p><strong>Species</strong> {{char.species}}</p>
+          <p><strong>Status: </strong> {{char.status}}</p>
+          <p><strong>Origin: </strong> {{char.origin.name}}</p>
+          <!-- <p><strong>Episodios </strong> <br>
+             <ul>
+               <li *ngFor="let epi of char.episode">
+                 <small class="small">{{epi}}</small>
+               </li>
+             </ul>
+         </div>-->
+        </div>
+        <div class="card-footer bg-success">
+          <small>Created at: {{char.created}}</small>
+        </div>
+    </div>
+  </div>
+</div>
+</div>

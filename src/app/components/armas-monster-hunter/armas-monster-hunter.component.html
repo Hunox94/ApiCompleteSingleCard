@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card shadow mt-4 mb-4">
+        <div class="card-header bg-info text-center">
+        <div class="card-title">
+          <h2><strong>Arma: {{ArmaMonster.name}}</strong></h2>
+        </div>
+        </div>
+        <img [src]="ArmaMonster.assets?.image" alt="" class="card-img-top">
+        <div class="card-body bg-secondary">
+          <p><strong>Tipo de arma: {{ArmaMonster.type}}</strong></p>
+          <p><strong>Rareza: {{ArmaMonster.rarity}}</strong></p>
+          <p><strong>Ataque: {{ArmaMonster.attack.display}}</strong></p>
+          <p><strong>Tipo de daño: {{ArmaMonster.attributes.damageType}}</strong></p>
+        </div>
+        <div class="card-footer bg-info">
+          <p><strong>ID del Arma: {{ArmaMonster.id}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

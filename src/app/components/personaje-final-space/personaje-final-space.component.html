@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card shadow mt-4 mb-4">
+                <div class="card-header bg-info text-center">
+                    <div class="card-title">
+                        <h2><strong>Personaje: {{personajeSpace.name}}</strong></h2>
+                    </div>
+                </div>
+                <img [src]="personajeSpace.img_url" alt="" class="card-img-top">
+                <div class="card-body bg-secondary">
+                    <p><strong>Estado: {{personajeSpace.status}}</strong></p>
+                    <p><strong>Género:{{personajeSpace.gender}}</strong></p>
+                    <p><strong>Origen{{personajeSpace.origin}}</strong></p>
+                </div>
+                <div class="card-footer bg-info">
+                    <p><strong>ID del Arma: {{personajeSpace.id}}</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row border-1 shadow">
+    <h1>Pokemon API</h1>
+    <h2>Número de personajes: {{infoAPI.totalCount}}</h2>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-md-4 my-2" *ngFor="let char of infoAPI.data">
+      <div class="card" [routerLink]="'/personajePokemon/'+char.id">
+        <div class="card-header bg-success">
+          <h4>{{char.name}}</h4>
+        </div>
+        <img [src]="char.images.small" alt="" class="card-image">
+        <div class="card-body bg-gradient bg-black">
+          <p><strong>Tipo: </strong> {{char.supertype}}</p>
+          <p><strong>Nivel:</strong> {{char.level}}</p>
+          <p><strong>Rareza:</strong> {{char.rarity}}</p>
+          <p><strong>Vida:</strong> {{char.hp}}</p>
+
+
+        </div>
+        <div class="card-footer bg-success">
+          <small>ID Personaje: {{char.id}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

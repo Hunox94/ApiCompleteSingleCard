@@ -1,0 +1,7 @@
+p{
+  color: white;
+}
+.card:hover{
+  transform: scale(105%);
+  cursor: pointer;
+}

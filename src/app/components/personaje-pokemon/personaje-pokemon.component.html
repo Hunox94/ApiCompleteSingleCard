@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row mt-4 mb-4">
+    <div class="col-6 offset-3" >
+    <div class="card shadow">
+      <div class="card-header">
+        <div class="card-title">
+          <p><strong>Nombre: {{onePokemon.name}}</strong></p>
+        </div>
+      </div>
+      <img [src]="onePokemon.images.small" alt="">
+      <div class="card-body">
+        <p><strong>Tipo: {{onePokemon.supertype}}</strong></p>
+        <p><strong>Rareza: {{onePokemon.rarity}}</strong></p>
+        <p *ngFor="let tipo of onePokemon.types"><strong>Tipo: {{tipo}}</strong></p>
+        <p><strong>Vida: {{onePokemon.hp}}</strong></p>
+      </div>
+      <div class="card-footer">
+        <p><strong>ID del Pokemon: {{onePokemon.id}}</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

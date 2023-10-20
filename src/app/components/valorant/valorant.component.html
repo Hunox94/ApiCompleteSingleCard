@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row border-1 shadow">
+    <h1>Valorant API</h1>
+    <h2>Número de personajes: {{infoAPI.status}}</h2>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-md-4 my-2" *ngFor="let char of infoAPI.data">
+      <div class="card h-100" [routerLink]="'/personaje-Valorant/'+char.uuid">
+        <div class="card-header bg-success">
+          <h4>{{char.displayName}} . {{char.developerName}}</h4>
+        </div>
+        <img [src]="char.displayIcon" alt="" class="card-image">
+        <div class="card-body bg-gradient bg-black">
+          <p><strong>Role: </strong> {{char.role?.displayName}}</p>
+          <p><strong>Descripción:</strong> {{char.description}}</p>
+          <p><strong>Habilidades:</strong> {{char.abilities[0].description}}</p>
+
+
+        </div>
+        <div class="card-footer bg-success">
+          <small>ID Personaje: {{char.uuid}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+p{
+  color: white;
+}
+.card:hover{
+  transform: scale(110%);
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px black;
+}
